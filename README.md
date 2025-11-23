@@ -1,2 +1,348 @@
-# jambrutprojecta
-untuk kekasih ku yang tercinta
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Jambrut Untuk Cimiiiii</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: radial-gradient(ellipse at center, #1e3c72 0%, #2a5298 50%, #ff6b6b 100%);
+            background-size: 400% 400%;
+            animation: cosmicShift 15s ease infinite;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+            perspective: 1000px;
+        }
+        @keyframes cosmicShift {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 100% 50%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+            100% { background-position: 0% 50%; }
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite ease-in-out;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+        .aurora {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 0, 150, 0.3), rgba(0, 204, 255, 0.3), rgba(255, 255, 0, 0.3));
+            animation: auroraWave 10s ease-in-out infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+        @keyframes auroraWave {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(0%); }
+            100% { transform: translateX(100%); }
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            transform: rotateX(5deg);
+            transition: transform 0.5s;
+        }
+        header:hover {
+            transform: rotateX(0deg);
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 0 0 20px #ff6b6b, 0 0 40px #ff6b6b;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #ff6b6b; }
+            to { text-shadow: 0 0 30px #00d4ff; }
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 107, 107, 0.8);
+            padding: 15px;
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 15px 20px;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            transition: all 0.4s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        nav a:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.5);
+        }
+        .tab-content {
+            display: none;
+            padding: 30px;
+            max-width: 900px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateZ(0);
+            transition: transform 0.5s;
+        }
+        .tab-content.active {
+            display: block;
+            animation: slideIn 0.8s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .meme {
+            text-align: center;
+            margin: 30px 0;
+            transform: rotateY(10deg);
+            transition: transform 0.5s;
+        }
+        .meme:hover {
+            transform: rotateY(0deg);
+        }
+        .meme img {
+            max-width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        .character {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.3);
+        }
+        #character-img {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByIjo1NSIgZmlsbD0iI2ZmNmI2YiIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjYiIGZpbGw9IiMwMDAiLz48Y2lyY2xlIGN4PSI3MCIgY3k9IjUwIiByPSI2IiBmaWxsPSIjMDAwIi8+PGNpcmNsZSBjeD0iNjAiIGN5PSI3NSIgcj0iOCIgZmlsbD0iI2ZmMDAwMCIvPjxwYXRoIGQ9Ik0gNDUgODUgUTQwIDkwIDQ1IDk1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0gNzUgODUgUTgwIDkwIDc1IDk1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPjxzdmc+') no-repeat center;
+            background-size: cover;
+            transition: transform 0.3s, filter 0.3s;
+            filter: drop-shadow(0 0 10px #ff6b6b);
+        }
+        #character-img:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 20px #00d4ff);
+        }
+        .heart-effect {
+            position: absolute;
+            font-size: 40px;
+            color: #ff6b6b;
+            animation: float 3s ease-out forwards;
+            filter: drop-shadow(0 0 10px #ff6b6b);
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-150px) rotate(360deg); opacity: 0; }
+        }
+        .love-note {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 30px 0;
+            text-shadow: 0 0 10px #fff;
+        }
+        .confetti {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #ffeaa7);
+            animation: confetti-fall 4s linear infinite;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(720deg); }
+        }
+        .particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            border-radius: 50%;
+            animation: particleFloat 5s linear infinite;
+        }
+        @keyframes particleFloat {
+            0% { transform: translateY(100vh); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora"></div>
+    <header>
+        <h1>Dunia Cimi Dan Jambrut ✨💫</h1>
+        <p>Masuklah ke dunia cinta yang penuh keajaiban, tawa, dan petualangan! </p>
+        <p>DILARANG BT DIAREA INI</p>
+    </header>
+    <nav>
+        <a href="#" onclick="showTab('home')">Menu Utama</a>
+        <a href="#" onclick="showTab('notes')">Pesan Mematikan</a>
+        <a href="#" onclick="showTab('memes')">Memes Preak</a>
+        <a href="#" onclick="showTab('play')">Petualangan Karakter</a>
+    </nav>
+    
+    <div id="home" class="tab-content active">
+        <h2>Selamat Datang di Hati Jambrut!</h2>
+        <p>Hai sayang, ini Menu spesial buat kamu. Jelajahi tab-tabnya untuk kejutan Yang Preak dan Membosankan!</p>
+        <div class="love-note">"Cinta itu seperti aurora: indah, tak terduga, dan selalu membuat hati bergetar!" 🌌❤️ EAAAA</div>
+    </div>
+    
+    <div id="notes" class="tab-content">
+        <h2>Pesan Magis Cinta</h2>
+        <p>Aku cinta kamu lebih dari apapun i loveeeeeeeee uuuuuuuu cintaaaaaaaaaaa ⭐❤️</p>
+        <p>Kamu adalah cahaya di kegelapan soalnya kamu hantu. 🌟</p>
+        <p>Pencet ini: Pencet untuk hujan Badai! <button onclick="addHearts()" style="background: linear-gradient(45deg, #ff6b6b, #4ecdc4); color: white; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">Klik!</button></p>
+    </div>
+    
+    <div id="memes" class="tab-content">
+        <h2>Memes Ajaib tentang Cinta</h2>
+        <div class="meme">
+            <img src="https://i.imgur.com/tOmKqQs.jpg" alt="Meme: When your partner says 'I love you' and you reply with 'I love you more'">
+            <p>Kapan pasangan bilang "Aku cinta kamu", dan kamu jawab "Aku cinta kamu lebih Dari Yang Kamu TAUUUUUU!" 😂✨</p>
+            <P>malass ah ngebugggggg gaasikkk</P>
+        </div>
+        <div class="meme">
+            <img src="https://i.imgur.com/8Z4w2kP.jpg" alt="Meme: Relationship goals: Eating pizza together">
+            <p>Pantun : Ikan Hiu Makann Tahu , I LOVEEEEEEEE UUU UHHUUHUUHUH🍕🌌❤️</p>
+        </div>
+        <p>Tema Yang Keren Abiezzz, tapi banyak bug malas!</p>
+    </div>
+    
+    <div id="play" class="tab-content">
+        <h2>Petualangan Karakter Ajaib! Bisa Memabukkan</h2>
+        <p>Klik dan gerakkan karakter ini dengan hidung. Dia akan menyebarkan cinta dan keajaiban! 💖✨</p>
+        <div class="character" id="character-container">
+            <div id="character-img"></div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // lope lope
+        function addHearts() {
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.className = 'heart-effect';
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.top = '50%';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 3000);
+            }
+        }
+
+        // karakter biang kerokkkkkkkk
+        const character = document.getElementById('character-img');
+        const container = document.getElementById('character-container');
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        character.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - character.offsetLeft;
+            offsetY = e.clientY - character.offsetTop;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const x = e.clientX - offsetX;
+                const y = e.clientY - offsetY;
+                character.style.left = Math.max(0, Math.min(container.clientWidth - 120, x)) + 'px';
+                character.style.top = Math.max(0, Math.min(container.clientHeight - 120, y)) + 'px';
+                // Efek cinta: confetti dan particle saat gerak
+                if (Math.random() > 0.8) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = x + 'px';
+                    confetti.style.top = y + 'px';
+                    container.appendChild(confetti);
+                    setTimeout(() => confetti.remove(), 4000);
+                }
+                if (Math.random() > 0.9) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = x + 'px';
+                    particle.style.top = y + 'px';
+                    container.appendChild(particle);
+                    setTimeout(() => particle.remove(), 5000);
+                }
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        // Latar spektakuler: Bintang, aurora sudah ada, tambah particle
+        function createStar() {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            document.body.appendChild(star);
+            setTimeout(() => star.remove(), 3000);
+        }
+
+        setInterval(createStar, 500);
+
+        // Particle floating
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.top = '100vh';
+            document.body.appendChild(particle);
+            setTimeout(() => particle.remove(), 5000);
+        }
+
+        setInterval(createParticle, 1000);
+
+    <audio id="bg-music" autoplay loop>
+     <source src="lagu.mp3" type="audio/mpeg">
+     <source src="lagu.ogg" type="audio/ogg">
+     Browser Anda tidak mendukung audio.
+   </audio>
+
+    </script>
+</body>
+</html>
+
+
